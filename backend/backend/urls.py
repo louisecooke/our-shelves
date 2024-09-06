@@ -25,4 +25,5 @@ router.register(r'books', views.BookView, 'book')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('', views.index),  # Catch all route for frontend SPA
 ]

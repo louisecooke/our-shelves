@@ -9,3 +9,7 @@ from .models import Book
 class BookView(viewsets.ModelViewSet):
     serializer_class = BookSerializer
     queryset = Book.objects.all()
+
+# view for serving React frontend
+def index(request):
+    return render(request, 'index.html')
